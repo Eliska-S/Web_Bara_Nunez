@@ -392,20 +392,23 @@ a::selection {
     justify-content: center;
   }
 
-  #work img {
-    padding: 0;
-    margin: auto;
-  }
-
+  
   .work__description {
     padding-top: 3em;
   }
 
-  #work img,
   .about__photo img,
   .photo--big img {
     margin-top: 3em;
-    width: 50vw;
+    width: 70vw;
+    height: auto;
+  }
+  
+  #work img {
+    padding: 0;
+    margin: auto;
+    margin-top: 0;
+    width: 60vw;
     height: auto;
   }
 
