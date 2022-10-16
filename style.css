@@ -309,7 +309,7 @@ a::selection {
 @media screen and (max-width: 1100px) {
   .header {
     height: fit-content;
-    min-height: 10vh;
+    min-height: 12vh;
     margin-left: 5vw;
     flex-wrap: wrap;
   }
@@ -317,7 +317,7 @@ a::selection {
   .header h1 {
     display: flex;
     align-items: center;
-    height: 10vh;
+    height: 12vh;
     font-size: 1.3em;
     width: 80%;
     margin: 0;
@@ -377,7 +377,7 @@ a::selection {
   }
 
   #work {
-    padding: 2em 0 3em 0;
+    padding: 3em 0;
   }
 
   .work__description > p {
@@ -397,7 +397,7 @@ a::selection {
   }
 
   .work__description {
-    padding-top: 3em;
+    padding-top: 1em;
   }
 
   .about__photo img,
@@ -447,7 +447,7 @@ a::selection {
   .banner__image {
     position: relative;
     left: 0;
-    height: 30vh;
+    height: 40vh;
     width: 100vw;
   }
 
