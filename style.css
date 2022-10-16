@@ -310,7 +310,7 @@ a::selection {
   .header {
     height: fit-content;
     min-height: 8vh;
-    margin: 0 5vw;
+    margin-left: 5vw;
     flex-wrap: wrap;
   }
 
@@ -376,6 +376,10 @@ a::selection {
     justify-content: center;
   }
 
+  #work {
+    padding: 3em 0;
+  }
+
   .work__description > p {
     margin-bottom: 3em;
   }
@@ -392,7 +396,6 @@ a::selection {
     justify-content: center;
   }
 
-  
   .work__description {
     padding-top: 3em;
   }
@@ -407,9 +410,10 @@ a::selection {
   #work img {
     padding: 0;
     margin: auto;
-    margin-top: 0;
+    margin-top: 1em;
     width: 60vw;
     height: auto;
+    order: 2;
   }
 
   .news__gallery {
