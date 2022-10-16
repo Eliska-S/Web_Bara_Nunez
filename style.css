@@ -1,6 +1,8 @@
-/* box sizing */
+/* box sizing, font, scroll behaviour*/
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'sans-serif';
     font-size: 16px;
 }
 
@@ -30,9 +32,10 @@ li{
 }
 
 /* styles */
-html{
-    scroll-behavior: smooth;
-    font-family: 'Poppins', 'sans-serif';
+p::selection,
+a::selection{
+    color: var(--text-tertiary);
+    background-color: var(--primary-color);
 }
 
 .title {
@@ -61,6 +64,7 @@ html{
 
 .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     height: 15vh;
@@ -142,6 +146,7 @@ html{
 .wrapper > * {
     padding: 5em 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -158,28 +163,7 @@ html{
     margin-top: 5em;
 }
 
-#work::before {
-    content:"";
-    background: inherit;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: -10vw;
-    top: 0;
-    z-index: -1;
-}
 
-#work::after {
-    content:"";
-    background: inherit;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 10vw;
-    top: 0;
-    z-index: -1;
-    overflow: hidden;
-}
 
 .work__description {
     width: 60%;
@@ -189,6 +173,8 @@ html{
 
 /* about */
 #about {
+    display: flex;
+    flex-wrap: wrap;
     padding: 5em 0;
     border-bottom: 2px solid var(--secondary-color);
 }
@@ -196,6 +182,7 @@ html{
 .about__photo {
     width: 40%;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     justify-content: end;
     padding-top: 1em;
@@ -210,7 +197,6 @@ html{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1.5fr;
-
 }
 
 .photo--big img,
@@ -279,4 +265,142 @@ html{
     margin-top: 1em;
     font-size: 1.2em;
     cursor: pointer;
+}
+
+@media screen and (min-width: 1201px) {
+    #work::before {
+        content:"";
+        background: inherit;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: -10vw;
+        top: 0;
+        z-index: -1;
+    }
+
+    #work::after {
+        content:"";
+        background: inherit;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 10vw;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .header {
+        height: 10vh;
+    }
+    
+    .header h1 {
+        font-size: 1.3em;
+        margin: 0.5em;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .squares {
+        display: none;
+    }
+
+    .banner {
+        margin-bottom: 0;
+        height: fit-content;
+    }
+
+    .banner__image {
+        position: relative;
+        left: 0;
+        height: 30vh;
+        width: 100vw;
+    }
+
+    .wrapper > * {
+        justify-content: center;
+        text-align: center;
+    }
+
+    
+    #work {
+        padding-top: 2em;
+        padding-bottom: 8em;
+    }
+    
+    #work img {
+        width: 70vw;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .work__description {
+        width: 100%;
+        padding: 0 5vw;
+    }
+
+    #work .link {
+        margin-top: 0;
+        font-size: 0.9em;
+        padding: 2em 5vw;
+    }
+
+    .photo--small {
+        display: none;
+    }
+
+    .about__description {
+        width: 100%;
+        padding: 0 5vw 2em 5vw;
+    }
+
+    .about__photo {
+        width: 100%;
+        justify-content: center;
+    }
+    .about__photo img {
+        width: 80vw;
+    }
+
+    #news {
+        padding: 3em 0 5em 0;
+    }
+    .news__description {
+        width: 100%;
+        margin-left: 0;
+        padding: 2em 5vw;
+        order: 1;
+    }
+
+    .news__gallery{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        order: 2;
+    }
+    .photo--big {
+        width: 100%;
+    }
+    .photo--big img {
+        width: 80vw;
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+    
+    #contact > * {
+        width: 100%;
+    }
+
+    .contact__socialMedia {
+        margin: 4em 0;
+    }
 }
