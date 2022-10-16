@@ -139,7 +139,7 @@ a::selection {
 .banner__text {
   color: var(--text-tertiary);
   font-weight: 700;
-  font-size: 2.3em;
+  font-size: 2.2em;
   line-height: 120%;
   letter-spacing: 0.05em;
 }
@@ -355,6 +355,7 @@ a::selection {
     top: 0;
     transition: all ease-in-out 0.4s;
   }
+
   .header__hamburger-menu {
     display: block;
     margin-left: auto;
