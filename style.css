@@ -169,12 +169,6 @@ a::selection {
   position: relative;
 }
 
-#work .link {
-  position: absolute;
-  right: 0;
-  margin-top: 5em;
-}
-
 .work__description {
   width: 60%;
   padding-top: 4.5em;
@@ -204,6 +198,7 @@ a::selection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1.5fr;
+  margin-bottom: 4em;
 }
 
 .button-right {
@@ -258,6 +253,11 @@ a::selection {
 
 .footer__content p {
   color: var(--text-secondary);
+  display: inline-block;
+}
+
+.copyright {
+  width: 50%;
 }
 
 #contact {
@@ -273,20 +273,31 @@ a::selection {
 
 .contact__email a {
   display: block;
+  width: 100%;
   margin-top: 1em;
   font-size: 1.4em;
   cursor: pointer;
 }
 
+.contact__socialMedia--icons{
+  margin-top: 1em;
+}
+
+.contact__socialMedia--icons > *{
+  margin-right: 1em;
+}
+
+
 @media screen and (max-width: 1400px) {
   .header h1 {
     margin-left: 3vw;
   }
-}
 
-@media screen and (max-width: 1330px) {
-  .wrapper {
-    padding: 2em;
+  #about,
+  #work,
+  #news {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   .footer {
@@ -320,7 +331,7 @@ a::selection {
 }
 
 /* tablets nad mobile screens */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   .header {
     height: fit-content;
     min-height: 12vh;
@@ -390,8 +401,8 @@ a::selection {
   #work > *,
   #news > * {
     width: 100%;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
     justify-content: center;
   }
 
@@ -403,12 +414,8 @@ a::selection {
     margin-bottom: 3em;
   }
 
-  #work .link {
-    position: relative;
-  }
-
   #news {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
   }
 
   .about__photo {
@@ -421,13 +428,15 @@ a::selection {
 
   .about__photo img {
     margin-top: 3em;
-    width: 50vw;
+    width: 40vw;
+    height: auto;
   }
 
   .photo--big img {
     margin-top: 3em;
-    width: 60vw;
+    width: 40vw;
     height: auto;
+    filter: grayscale(0%);
   }
   
   #work img {
@@ -459,12 +468,6 @@ a::selection {
 
   .photo--small {
     display: none;
-    margin-top: 3em;
-  }
-
-  .photo--small img {
-    width: 70vw;
-    height: auto;
   }
 
   .footer {
@@ -477,6 +480,10 @@ a::selection {
 
   .contact__socialMedia {
     margin: 4em 0;
+  }
+
+  .copyright {
+    width: 100%;
   }
 }
 
@@ -511,12 +518,8 @@ a::selection {
 
   .photo--big img {
     margin-top: 3em;
-    width: 75vw;
+    width: 70vw;
     height: auto;
-  }
-
-  .photo--small img {
-    width: 75vw;
   }
 }
 
