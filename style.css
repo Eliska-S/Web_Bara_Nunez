@@ -236,6 +236,19 @@ a::selection {
   margin-left: auto;
 }
 
+.media {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.media__list {
+  margin-top: 1.5em;
+}
+
+.media__list--item {
+  margin-top: 1.5em;
+}
+
 /* footer */
 .footer {
   padding: 3em 0;
@@ -327,6 +340,17 @@ a::selection {
     top: 0;
     z-index: -1;
     overflow: hidden;
+  }
+
+  .media {
+    margin-top: 0;
+    margin-bottom: 4em;
+  }
+
+  .media__list--item {
+    margin-top: 1em;
+    list-style-type: circle;
+    margin-left: 1.2em;
   }
 }
 
